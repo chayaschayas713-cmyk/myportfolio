@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Software Engineer - Projects, Skills, and Experience">
+    <title>Software Engineer Portfolio</title>
+    
+    <!-- Google Fonts: Pixel Fonts (Press Start 2P, Silkscreen, VT323) & Modern Sans (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========================================================= -->
+    <!-- MOBILE TOP BAR (VISIBLE ON SCREENS <= 1024px) -->
+    <!-- ========================================================= -->
+    <header class="mobile-header" id="mobile-header">
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar-nav">
+            <span class="menu-icon" aria-hidden="true">☰</span>
+            <span class="menu-label">MENU</span>
+        </button>
+
+        <a href="#hero" class="mobile-logo">
+            <span class="sidebar-logo-icon">👾</span>
+            <span>CHAYA.DEV</span>
+        </a>
+
+        <div class="mobile-theme-wrapper">
+            <button type="button" class="theme-toggle-btn mobile-theme-btn" id="mobile-theme-toggle-btn" aria-label="Toggle Night Mode" aria-pressed="false">
+                <span class="theme-icon" aria-hidden="true">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Overlay Scrim for Mobile Drawer -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
+
+    <!-- ========================================================= -->
+    <!-- VERTICAL NAVIGATION BAR (LEFT SIDEBAR - PIXEL ART STYLE) -->
+    <!-- ========================================================= -->
+    <!-- Accessible, sticky/fixed left sidebar styled with pixel art aesthetics -->
+    <aside class="pixel-sidebar" id="sidebar-nav" aria-label="Main Navigation">
+        <!-- Sidebar Header: Brand & Mobile Close -->
+        <div class="sidebar-header">
+            <div class="sidebar-logo-group">
+                <a href="#hero" class="sidebar-logo" id="sidebar-logo">
+                    <span class="sidebar-logo-icon">👾</span>
+                    <span>CHAYA.DEV</span>
+                </a>
+                <button type="button" class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close navigation menu">✕</button>
+            </div>
+            <span class="sidebar-mission-tag">► SELECT DESTINATION</span>
+        </div>
+
+        <!-- Vertical Navigation Links List -->
+        <nav class="sidebar-nav-container">
+            <ul class="sidebar-nav-list" id="sidebar-nav-list">
+                <li class="sidebar-nav-item">
+                    <a href="#hero" class="sidebar-nav-link active" id="nav-home" aria-current="page">
+                        <span class="nav-indicator" aria-hidden="true">►</span>
+                        <span class="nav-icon" aria-hidden="true">🏠</span>
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#about" class="sidebar-nav-link" id="nav-about">
+                        <span class="nav-indicator" aria-hidden="true">►</span>
+                        <span class="nav-icon" aria-hidden="true">👤</span>
+                        <span class="nav-text">About Me</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#skills" class="sidebar-nav-link" id="nav-skills">
+                        <span class="nav-indicator" aria-hidden="true">►</span>
+                        <span class="nav-icon" aria-hidden="true">⚡</span>
+                        <span class="nav-text">Skills</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#timeline" class="sidebar-nav-link" id="nav-timeline">
+                        <span class="nav-indicator" aria-hidden="true">►</span>
+                        <span class="nav-icon" aria-hidden="true">⏳</span>
+                        <span class="nav-text">Timeline</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#projects" class="sidebar-nav-link" id="nav-projects">
+                        <span class="nav-indicator" aria-hidden="true">►</span>
+                        <span class="nav-icon" aria-hidden="true">⚔️</span>
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#video-showcase" class="sidebar-nav-link" id="nav-video">
+                        <span class="nav-indicator" aria-hidden="true">►</span>
+                        <span class="nav-icon" aria-hidden="true">🎬</span>
+                        <span class="nav-text">Intro Video</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#testimonials" class="sidebar-nav-link" id="nav-testimonials">
+                        <span class="nav-indicator" aria-hidden="true">►</span>
+                        <span class="nav-icon" aria-hidden="true">💬</span>
+                        <span class="nav-text">Testimonials</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#chat" class="sidebar-nav-link" id="nav-chat">
+                        <span class="nav-indicator" aria-hidden="true">►</span>
+                        <span class="nav-icon" aria-hidden="true">🤖</span>
+                        <span class="nav-text">Chat</span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="#contact" class="sidebar-nav-link" id="nav-contact">
+                        <span class="nav-indicator" aria-hidden="true">►</span>
+                        <span class="nav-icon" aria-hidden="true">✉️</span>
+                        <span class="nav-text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Footer: Night Mode Toggle & System Status -->
+        <div class="sidebar-footer">
+            <div class="theme-toggle-wrapper">
+                <button type="button" class="theme-toggle-btn sidebar-theme-btn" id="theme-toggle-btn" aria-label="Toggle Night Mode" aria-pressed="false">
+                    <span class="theme-icon" aria-hidden="true">🌙</span>
+                    <span class="theme-toggle-label">NIGHT</span>
+                </button>
+            </div>
+            <div class="sidebar-status-box">
+                <span>SYSTEM STATUS</span>
+                <span style="display: flex; align-items: center; gap: 4px; color: var(--accent-green);">
+                    <span class="status-online-dot"></span> ONLINE
+                </span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ========================================================= -->
+    <!-- MAIN PAGE WRAPPER (OFFSETS CONTENT FOR LEFT SIDEBAR) -->
+    <!-- ========================================================= -->
+    <div class="page-layout-wrapper" id="page-wrapper">
+
+        <!-- ========================================================= -->
+        <!-- MAIN CONTENT -->
+        <!-- ========================================================= -->
+        <main id="main-content">
+
+        <!-- ===================================================== -->
+        <!-- SECTION: HERO (PIXEL ART STYLE WITH BACKGROUND IMAGE) -->
+        <!-- ===================================================== -->
+        <!-- Hero section with pixel art aesthetic, dialogue box window, custom background image, and character HUD -->
+        <section class="section hero-section" id="hero" aria-labelledby="hero-title">
+            <div class="hero-pixel-backdrop" aria-hidden="true"></div>
+            
+            <div class="container hero-container">
+                <!-- Left: RPG Dialogue Window -->
+                <div class="hero-window">
+                    <div class="window-titlebar">
+                        <span class="window-title">
+                            <span>◆</span> CHAYA_PORTFOLIO.EXE
+                        </span>
+                        <div class="window-controls" aria-hidden="true">
+                            <span class="window-btn btn-minimize"></span>
+                            <span class="window-btn btn-maximize"></span>
+                            <span class="window-btn btn-close"></span>
+                        </div>
+                    </div>
+
+                    <div class="window-body">
+                        <!-- Player Status HUD -->
+                        <div class="player-status-bar">
+                            <span class="pixel-badge status-online">
+                                <span class="pixel-dot"></span> STATUS: ONLINE
+                            </span>
+                            <span class="pixel-badge status-lvl">LVL 99 ENGINEER</span>
+                            <span class="pixel-badge">CLASS: FULL-STACK</span>
+                        </div>
+
+                        <!-- Welcome Title & Greeting -->
+                        <div class="hero-text-block">
+                            <p class="hero-greeting">► MISSION BRIEFING // WELCOME VISITOR</p>
+                            <h1 id="hero-title" class="hero-title">
+                                HELLO WORLD! I'M <span class="highlight-name">CHAYA</span>
+                            </h1>
+                        </div>
+
+                        <!-- Brief Tagline inside Dialogue Textbox -->
+                        <div class="hero-tagline-box">
+                            <p class="hero-tagline">
+                                "Software Engineer & Problem Solver — Architecting scalable cloud backends, resilient codebases, and pixel-perfect interactive digital experiences."<span class="pixel-cursor" aria-hidden="true">█</span>
+                            </p>
+                        </div>
+
+                        <!-- Pixel Call-To-Action Buttons -->
+                        <div class="hero-actions">
+                            <a href="#projects" class="pixel-btn pixel-btn-primary" id="cta-projects">
+                                <span>►</span> VIEW QUESTS
+                            </a>
+                            <a href="#contact" class="pixel-btn pixel-btn-secondary" id="cta-contact">
+                                <span>✉</span> CONTACT ME
+                            </a>
+                            <a href="Chaya_resume.pdf" class="pixel-btn pixel-btn-outline" id="cta-resume" download>
+                                <span>📄</span> RESUME
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Pixel Character Avatar Frame & HUD Meters -->
+                <div class="hero-avatar-card">
+                    <div class="avatar-frame">
+                        <img src="profile photo.jpeg" alt="Chaya - Software Engineer portrait" class="avatar-img" width="280" height="280">
+                    </div>
+
+                    <div class="character-hud">
+                        <div class="hud-header">
+                            <span class="hud-name">PLAYER: CHAYA</span>
+                            <span class="hud-class">EXP: 99.9%</span>
+                        </div>
+                        <div class="hud-meters">
+                            <div class="stat-row">
+                                <span class="stat-label">HP</span>
+                                <div class="stat-bar-container">
+                                    <div class="stat-fill fill-hp"></div>
+                                </div>
+                                <span class="stat-val">100/100</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">MP</span>
+                                <div class="stat-bar-container">
+                                    <div class="stat-fill fill-mp"></div>
+                                </div>
+                                <span class="stat-val">95/100</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">XP</span>
+                                <div class="stat-bar-container">
+                                    <div class="stat-fill fill-exp"></div>
+                                </div>
+                                <span class="stat-val">MAX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- SECTION: ABOUT ME (MINIMALISTIC PIXEL-TOUCH DESIGN) -->
+        <!-- ===================================================== -->
+        <!-- Clean, minimalistic About section with pixel-art avatar, concise bio, career highlights, and personal interests -->
+        <section class="section about-section" id="about" aria-labelledby="about-heading">
+            <div class="container about-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <span class="section-tag">► CHARACTER DOSSIER</span>
+                    <h2 id="about-heading" class="section-title">About Me</h2>
+                    <p class="section-subtitle">
+                        A glance into my engineering mindset, career highlights, and passion for building resilient software.
+                    </p>
+                </div>
+
+                <!-- Main About Grid Layout -->
+                <div class="about-grid reveal">
+                    <!-- Left Column: Pixel Art Avatar Card -->
+                    <div class="about-avatar-wrapper">
+                        <div class="about-avatar-card">
+                            <div class="about-avatar-frame">
+                                <img src="pixel-avatar.jpg" alt="Chaya S - Pixel art avatar" class="about-avatar-img" width="300" height="300" loading="lazy">
+                            </div>
+                            
+                            <div class="about-profile-info">
+                                <div class="about-info-item">
+                                    <span class="about-info-label">IDENTIFIER:</span>
+                                    <span class="about-info-val">CHAYA S</span>
+                                </div>
+                                <div class="about-info-item">
+                                    <span class="about-info-label">ROLE:</span>
+                                    <span class="about-info-val">SOFTWARE DEV</span>
+                                </div>
+                                <div class="about-info-item">
+                                    <span class="about-info-label">LOCATION:</span>
+                                    <span class="about-info-val">BENGALURU, IN</span>
+                                </div>
+                                <div class="about-info-item">
+                                    <span class="about-info-label">FOCUS:</span>
+                                    <span class="about-info-val">FULL-STACK &amp; DSA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Bio Narrative & Career Highlights -->
+                    <div class="about-bio-container">
+                        <!-- Short Bio Lead -->
+                        <p class="about-bio-lead">
+                            Hello! I'm <span class="highlight-term">Chaya</span>, a software engineer driven by an obsession with clean code, robust system architectures, and turning challenging algorithmic problems into intuitive digital solutions.
+                        </p>
+
+                        <p class="about-bio-body">
+                            My journey in technology is grounded in strong computer science fundamentals—spanning Data Structures, Algorithms, Object-Oriented Programming (OOP), and Operating Systems. I build end-to-end applications that prioritize speed, security, and developer ergonomics, utilizing Java, Python, modern frontend web standards, and MySQL databases.
+                        </p>
+
+                        <!-- Career Highlights (Clean, Minimalistic Cards) -->
+                        <div class="about-highlights-grid">
+                            <div class="about-highlight-card">
+                                <div class="highlight-card-header">
+                                    <span class="highlight-icon">⚡</span>
+                                    <h3 class="highlight-card-title">Core Engineering</h3>
+                                </div>
+                                <p class="highlight-card-desc">
+                                    Solid algorithmic problem solving in Java and Python with clean OOP architecture and database schema design.
+                                </p>
+                            </div>
+
+                            <div class="about-highlight-card">
+                                <div class="highlight-card-header">
+                                    <span class="highlight-icon">🏗️</span>
+                                    <h3 class="highlight-card-title">Full-Stack Craft</h3>
+                                </div>
+                                <p class="highlight-card-desc">
+                                    Hands-on experience creating responsive, accessible user interfaces backed by performant services and APIs.
+                                </p>
+                            </div>
+
+                            <div class="about-highlight-card">
+                                <div class="highlight-card-header">
+                                    <span class="highlight-icon">🎯</span>
+                                    <h3 class="highlight-card-title">Agile Execution</h3>
+                                </div>
+                                <p class="highlight-card-desc">
+                                    Fast learner with a relentless focus on maintainability, testing, clean Git workflows, and continuous delivery.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Personal Interests (Retro Pill Badges) -->
+                        <div class="about-interests-box">
+                            <span class="interests-title">
+                                <span>🕹️</span> Personal Interests &amp; Creative Pursuits
+                            </span>
+                            <div class="interests-tags">
+                                <span class="interest-tag">👾 8-Bit &amp; Retro Aesthetics</span>
+                                <span class="interest-tag">🧩 Algorithm Puzzles &amp; LeetCode</span>
+                                <span class="interest-tag">🌐 Open Web Standards</span>
+                                <span class="interest-tag">📖 Software Architecture Books</span>
+                                <span class="interest-tag">☕ Coffee &amp; Problem Solving</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="about-actions">
+                            <a href="Chaya_resume.pdf" class="pixel-btn pixel-btn-primary" id="about-download-resume" download>
+                                <span>📄</span> DOWNLOAD RESUME
+                            </a>
+                            <a href="#contact" class="pixel-btn pixel-btn-secondary" id="about-contact-btn">
+                                <span>✉</span> GET IN TOUCH
+                            </a>
+                            <a href="#projects" class="pixel-btn pixel-btn-outline" id="about-projects-btn">
+                                <span>⚔️</span> EXPLORE PROJECTS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- SECTION: SKILLS -->
+        <!-- ===================================================== -->
+        <!-- Skills section: Technical languages, frameworks, databases, and tooling -->
+        <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+            <div class="container skills-container">
+                <div class="section-header">
+                    <span class="section-tag">► TECH INVENTORY</span>
+                    <h2 id="skills-heading" class="section-title">Skills &amp; Technologies</h2>
+                    <p class="section-subtitle">Core programming languages, frameworks, and technical competencies</p>
+                </div>
+
+                <div class="skills-grid reveal-stagger" id="skills-grid">
+                    <!-- Category: Frontend -->
+                    <div class="skill-card" id="skills-frontend">
+                        <div class="skill-category-header">
+                            <span class="skill-category-icon">🎨</span>
+                            <h3 class="skill-category-title">Frontend &amp; UI</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill">HTML5</span>
+                            <span class="skill-pill">CSS3 / Vanilla CSS</span>
+                            <span class="skill-pill">JavaScript (ES6+)</span>
+                            <span class="skill-pill">Responsive Design</span>
+                            <span class="skill-pill">DOM APIs</span>
+                            <span class="skill-pill">Web Accessibility (a11y)</span>
+                        </div>
+                    </div>
+
+                    <!-- Category: Backend & Languages -->
+                    <div class="skill-card" id="skills-backend">
+                        <div class="skill-category-header">
+                            <span class="skill-category-icon">⚡</span>
+                            <h3 class="skill-category-title">Languages &amp; Backend</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill">Java</span>
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">C Programming</span>
+                            <span class="skill-pill">RESTful APIs</span>
+                            <span class="skill-pill">OOP Architecture</span>
+                            <span class="skill-pill">Multi-Threading</span>
+                        </div>
+                    </div>
+
+                    <!-- Category: Databases & Systems -->
+                    <div class="skill-card" id="skills-database">
+                        <div class="skill-category-header">
+                            <span class="skill-category-icon">🗄️</span>
+                            <h3 class="skill-category-title">Databases &amp; Systems</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill">MySQL</span>
+                            <span class="skill-pill">Relational Modeling</span>
+                            <span class="skill-pill">SQL Optimization</span>
+                            <span class="skill-pill">Database Schema</span>
+                            <span class="skill-pill">Operating Systems</span>
+                        </div>
+                    </div>
+
+                    <!-- Category: Tools & Core CS -->
+                    <div class="skill-card" id="skills-tools">
+                        <div class="skill-category-header">
+                            <span class="skill-category-icon">🛠️</span>
+                            <h3 class="skill-category-title">Core CS &amp; Tooling</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="skill-pill">Data Structures &amp; Algorithms</span>
+                            <span class="skill-pill">Git &amp; GitHub</span>
+                            <span class="skill-pill">Linux / CLI</span>
+                            <span class="skill-pill">VS Code</span>
+                            <span class="skill-pill">Agile &amp; Scrum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- SECTION: TIMELINE (BENEATH SKILLS) -->
+        <!-- ===================================================== -->
+        <!-- Timeline component listing key events: education, major projects, and career milestones -->
+        <section class="section timeline-section" id="timeline" aria-labelledby="timeline-heading">
+            <div class="container timeline-container">
+                <div class="section-header">
+                    <span class="section-tag">► QUEST LOG</span>
+                    <h2 id="timeline-heading" class="section-title">Timeline &amp; Milestones</h2>
+                    <p class="section-subtitle">
+                        Key events tracing my academic foundation, landmark projects, and professional engineering milestones.
+                    </p>
+                </div>
+
+                <!-- Timeline Interactive Alternating Wrapper -->
+                <div class="timeline-wrapper">
+                    <!-- Milestone 1: Career Milestone -->
+                    <article class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true">💼</div>
+                        <div class="timeline-item-content">
+                            <div class="timeline-card">
+                                <div class="timeline-card-header">
+                                    <span class="timeline-badge badge-career">💼 Career Milestone</span>
+                                    <span class="timeline-date">2024 — Present</span>
+                                </div>
+                                <h3 class="timeline-title">Software Engineer</h3>
+                                <h4 class="timeline-org">Enterprise Solutions</h4>
+                                <p class="timeline-desc">
+                                    Building robust, performant full-stack web solutions and scalable backend services. Implementing clean OOP paradigms, developing modular web components, writing unit tests, and optimizing database interactions.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="timeline-tag">Full-Stack Development</span>
+                                    <span class="timeline-tag">Clean Architecture</span>
+                                    <span class="timeline-tag">Java &amp; Python</span>
+                                    <span class="timeline-tag">Agile Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 2: Major Project -->
+                    <article class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true">🚀</div>
+                        <div class="timeline-item-content">
+                            <div class="timeline-card">
+                                <div class="timeline-card-header">
+                                    <span class="timeline-badge badge-project">🚀 Major Project</span>
+                                    <span class="timeline-date">2023 — 2024</span>
+                                </div>
+                                <h3 class="timeline-title">Rural Operations &amp; Communications Hub</h3>
+                                <h4 class="timeline-org">Lead Project Developer</h4>
+                                <p class="timeline-desc">
+                                    Architected and launched a comprehensive web portal designed to assist marketing communications and rural logistics. Engineered normalized MySQL schemas, secure API routing, and high-performance interactive interfaces.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="timeline-tag">MySQL Schema</span>
+                                    <span class="timeline-tag">Full-Stack Web</span>
+                                    <span class="timeline-tag">JavaScript ES6+</span>
+                                    <span class="timeline-tag">System Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 3: Major Project -->
+                    <article class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true">⚙️</div>
+                        <div class="timeline-item-content">
+                            <div class="timeline-card">
+                                <div class="timeline-card-header">
+                                    <span class="timeline-badge badge-project">⚙️ Major Project</span>
+                                    <span class="timeline-date">2022 — 2023</span>
+                                </div>
+                                <h3 class="timeline-title">Algorithmic Compute &amp; Data Pipeline</h3>
+                                <h4 class="timeline-org">Systems &amp; Algorithm Optimization</h4>
+                                <p class="timeline-desc">
+                                    Engineered a multithreaded processing engine built with custom implementations of core Data Structures and Algorithms (trees, graph traversal, caching layers). Boosted computational throughput and minimized latency.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="timeline-tag">DSA &amp; Optimization</span>
+                                    <span class="timeline-tag">Java Core</span>
+                                    <span class="timeline-tag">OOP Fundamentals</span>
+                                    <span class="timeline-tag">Benchmarking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Milestone 4: Education Milestone -->
+                    <article class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true">🎓</div>
+                        <div class="timeline-item-content">
+                            <div class="timeline-card">
+                                <div class="timeline-card-header">
+                                    <span class="timeline-badge badge-education">🎓 Education Milestone</span>
+                                    <span class="timeline-date">2020 — 2024</span>
+                                </div>
+                                <h3 class="timeline-title">B.E. in Computer Science &amp; Engineering</h3>
+                                <h4 class="timeline-org">VTU Engineering Institute</h4>
+                                <p class="timeline-desc">
+                                    Graduated with First Class with Distinction. Excelled in core Computer Science fundamentals: Data Structures &amp; Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, and Computer Networks.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="timeline-tag">First Class with Distinction</span>
+                                    <span class="timeline-tag">Data Structures &amp; Algorithms</span>
+                                    <span class="timeline-tag">Operating Systems</span>
+                                    <span class="timeline-tag">DBMS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION: PROJECTS                                                         -->
+        <!-- ARCHITECTURAL CONNECTION NOTE:                                             -->
+        <!-- Each project thumbnail and inspect button contains `data-project-id="X"`   -->
+        <!-- (IDs: 1, 2, 3, 4). When clicked, script.js matches this ID against the    -->
+        <!-- `PROJECTS_DATA` catalog, loads full high-res media, system architecture,   -->
+        <!-- and links, and displays the modal dialog (#project-modal-backdrop).       -->
+        <!-- Direct links to Live Demos and GitHub repositories are also provided.      -->
+        <!-- ========================================================================= -->
+        <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+            <div class="container projects-container">
+                <div class="section-header">
+                    <span class="section-tag">► SHIPPED BUILDS &amp; REPOSITORIES</span>
+                    <h2 id="projects-heading" class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">
+                        Click any thumbnail to inspect architecture details, technical specs, and live demonstrations.
+                    </p>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <!-- ===================================================== -->
+                    <!-- PROJECT 1: GRAMSETU (RURAL OPERATIONS HUB) -->
+                    <!-- CONNECTION: data-project-id="1" maps to Project 1 in PROJECTS_DATA -->
+                    <!-- ===================================================== -->
+                    <article class="project-card" id="project-card-1">
+                        <div class="project-card-header">
+                            <span class="project-category-badge">Full-Stack &amp; MySQL</span>
+                            <span class="project-id-tag">QUEST #01</span>
+                        </div>
+
+                        <!-- Clickable Thumbnail Container: Triggers modal for Project ID 1 -->
+                        <button type="button" class="project-thumbnail-wrapper" data-project-id="1" aria-label="Open detailed view for GramSetu Portal">
+                            <img src="project-1-gramsetu.jpg" alt="GramSetu project dashboard thumbnail" class="project-thumbnail-img" width="480" height="300" loading="lazy">
+                            <div class="thumbnail-hover-overlay" aria-hidden="true">
+                                <span class="thumbnail-overlay-btn">🔍 VIEW SPECS</span>
+                            </div>
+                        </button>
+
+                        <div class="project-card-body">
+                            <h3 class="project-card-title" data-project-id="1">GramSetu — Rural Operations &amp; Logistics Hub</h3>
+                            <p class="project-card-desc">
+                                End-to-end full-stack web portal streamlining regional communication, automated support routing, and localized fleet inventory metrics.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">MySQL</span>
+                                <span class="project-tag">JavaScript ES6+</span>
+                                <span class="project-tag">REST APIs</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Action Links -->
+                        <div class="project-card-actions">
+                            <button type="button" class="project-action-btn btn-inspect" data-project-id="1" aria-label="Inspect details of GramSetu">
+                                <span>🔍</span> Inspect Details
+                            </button>
+                            <a href="#chat" class="project-action-btn" aria-label="View demo of GramSetu">
+                                <span>🌐</span> Live Demo
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View source code on GitHub">
+                                <span>💻</span> GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- ===================================================== -->
+                    <!-- PROJECT 2: ALGOVISUALIZER (DSA BENCHMARKING SUITE) -->
+                    <!-- CONNECTION: data-project-id="2" maps to Project 2 in PROJECTS_DATA -->
+                    <!-- ===================================================== -->
+                    <article class="project-card" id="project-card-2">
+                        <div class="project-card-header">
+                            <span class="project-category-badge">Algorithms &amp; Systems</span>
+                            <span class="project-id-tag">QUEST #02</span>
+                        </div>
+
+                        <!-- Clickable Thumbnail Container: Triggers modal for Project ID 2 -->
+                        <button type="button" class="project-thumbnail-wrapper" data-project-id="2" aria-label="Open detailed view for AlgoVisualizer Engine">
+                            <img src="project-2-algovis.jpg" alt="AlgoVisualizer algorithm graph thumbnail" class="project-thumbnail-img" width="480" height="300" loading="lazy">
+                            <div class="thumbnail-hover-overlay" aria-hidden="true">
+                                <span class="thumbnail-overlay-btn">🔍 VIEW SPECS</span>
+                            </div>
+                        </button>
+
+                        <div class="project-card-body">
+                            <h3 class="project-card-title" data-project-id="2">AlgoVisualizer — Graph &amp; Sorting Execution Suite</h3>
+                            <p class="project-card-desc">
+                                High-performance visualizer and benchmarking suite executing real-time sorting algorithms, shortest-path graph traversals, and binary search trees.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">Java Core</span>
+                                <span class="project-tag">DSA Optimization</span>
+                                <span class="project-tag">Graph Algorithms</span>
+                                <span class="project-tag">Canvas Rendering</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Action Links -->
+                        <div class="project-card-actions">
+                            <button type="button" class="project-action-btn btn-inspect" data-project-id="2" aria-label="Inspect details of AlgoVisualizer">
+                                <span>🔍</span> Inspect Details
+                            </button>
+                            <a href="#chat" class="project-action-btn" aria-label="View demo of AlgoVisualizer">
+                                <span>🌐</span> Live Demo
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View source code on GitHub">
+                                <span>💻</span> GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- ===================================================== -->
+                    <!-- PROJECT 3: CLOUDTASK (WORKFLOW KANBAN PORTAL) -->
+                    <!-- CONNECTION: data-project-id="3" maps to Project 3 in PROJECTS_DATA -->
+                    <!-- ===================================================== -->
+                    <article class="project-card" id="project-card-3">
+                        <div class="project-card-header">
+                            <span class="project-category-badge">Frontend Architecture</span>
+                            <span class="project-id-tag">QUEST #03</span>
+                        </div>
+
+                        <!-- Clickable Thumbnail Container: Triggers modal for Project ID 3 -->
+                        <button type="button" class="project-thumbnail-wrapper" data-project-id="3" aria-label="Open detailed view for CloudTask Kanban">
+                            <img src="project-3-cloudtask.jpg" alt="CloudTask Kanban board thumbnail" class="project-thumbnail-img" width="480" height="300" loading="lazy">
+                            <div class="thumbnail-hover-overlay" aria-hidden="true">
+                                <span class="thumbnail-overlay-btn">🔍 VIEW SPECS</span>
+                            </div>
+                        </button>
+
+                        <div class="project-card-body">
+                            <h3 class="project-card-title" data-project-id="3">CloudTask — Agile Workflow &amp; Task Manager</h3>
+                            <p class="project-card-desc">
+                                Interactive project tracking environment with fluid drag-and-drop task lanes, subtask checklists, persistent browser storage, and velocity stats.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">JavaScript ES6+</span>
+                                <span class="project-tag">CSS3 / Drag &amp; Drop</span>
+                                <span class="project-tag">State Management</span>
+                                <span class="project-tag">Local Storage</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Action Links -->
+                        <div class="project-card-actions">
+                            <button type="button" class="project-action-btn btn-inspect" data-project-id="3" aria-label="Inspect details of CloudTask">
+                                <span>🔍</span> Inspect Details
+                            </button>
+                            <a href="#chat" class="project-action-btn" aria-label="View demo of CloudTask">
+                                <span>🌐</span> Live Demo
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View source code on GitHub">
+                                <span>💻</span> GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- ===================================================== -->
+                    <!-- PROJECT 4: RETROPIXEL (8-BIT CANVAS ADVENTURE) -->
+                    <!-- CONNECTION: data-project-id="4" maps to Project 4 in PROJECTS_DATA -->
+                    <!-- ===================================================== -->
+                    <article class="project-card" id="project-card-4">
+                        <div class="project-card-header">
+                            <span class="project-category-badge">Game Dev &amp; Canvas</span>
+                            <span class="project-id-tag">QUEST #04</span>
+                        </div>
+
+                        <!-- Clickable Thumbnail Container: Triggers modal for Project ID 4 -->
+                        <button type="button" class="project-thumbnail-wrapper" data-project-id="4" aria-label="Open detailed view for RetroPixel Adventure">
+                            <img src="project-4-arcade.jpg" alt="RetroPixel adventure game thumbnail" class="project-thumbnail-img" width="480" height="300" loading="lazy">
+                            <div class="thumbnail-hover-overlay" aria-hidden="true">
+                                <span class="thumbnail-overlay-btn">🔍 VIEW SPECS</span>
+                            </div>
+                        </button>
+
+                        <div class="project-card-body">
+                            <h3 class="project-card-title" data-project-id="4">RetroPixel — 8-Bit Interactive Canvas Adventure</h3>
+                            <p class="project-card-desc">
+                                A 2D side-scrolling platformer crafted using HTML5 Canvas. Features custom physics, bounding-box collision detection, parallax scrolling, and sound synthesis.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5 Canvas</span>
+                                <span class="project-tag">Game Physics</span>
+                                <span class="project-tag">Web Audio API</span>
+                                <span class="project-tag">Pixel Rendering</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Action Links -->
+                        <div class="project-card-actions">
+                            <button type="button" class="project-action-btn btn-inspect" data-project-id="4" aria-label="Inspect details of RetroPixel">
+                                <span>🔍</span> Inspect Details
+                            </button>
+                            <a href="#chat" class="project-action-btn" aria-label="View demo of RetroPixel">
+                                <span>🌐</span> Live Demo
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View source code on GitHub">
+                                <span>💻</span> GitHub
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- ========================================================================= -->
+            <!-- DETAILED VIEW MODAL COMPONENT                                            -->
+            <!-- CONNECTION LOGIC: When any thumbnail or "Inspect Details" button is       -->
+            <!-- clicked, script.js populates this dialog with the project's data and     -->
+            <!-- activates the `.active` CSS state. Dismissable via Close button, Esc key, -->
+            <!-- or backdrop click.                                                        -->
+            <!-- ========================================================================= -->
+            <div class="project-modal-backdrop" id="project-modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-project-title">
+                <div class="project-modal-dialog">
+                    <div class="modal-titlebar">
+                        <span class="modal-titlebar-text">
+                            <span>◆</span> <span id="modal-window-title">PROJECT_INSPECTOR.EXE</span>
+                        </span>
+                        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close project details modal">✕</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <!-- Full Resolution Project Preview Image -->
+                        <div class="modal-preview-frame">
+                            <img src="" alt="Project detail preview" id="modal-preview-img" class="modal-preview-img">
+                        </div>
+
+                        <div class="modal-info-header">
+                            <h3 class="modal-project-title" id="modal-project-title">Project Title</h3>
+                        </div>
+
+                        <!-- Metadata Grid -->
+                        <div class="modal-details-grid">
+                            <div class="modal-detail-block">
+                                <span class="modal-detail-label">CATEGORY / DOMAIN:</span>
+                                <span class="modal-detail-text" id="modal-detail-domain">Full-Stack Application</span>
+                            </div>
+                            <div class="modal-detail-block">
+                                <span class="modal-detail-label">ENGINEERING ROLE:</span>
+                                <span class="modal-detail-text" id="modal-detail-role">Lead Developer &amp; Architect</span>
+                            </div>
+                            <div class="modal-detail-block">
+                                <span class="modal-detail-label">DATABASE &amp; BACKEND:</span>
+                                <span class="modal-detail-text" id="modal-detail-backend">MySQL / Java Core</span>
+                            </div>
+                            <div class="modal-detail-block">
+                                <span class="modal-detail-label">ARCHITECTURE:</span>
+                                <span class="modal-detail-text" id="modal-detail-arch">Modular MVC Pattern</span>
+                            </div>
+                        </div>
+
+                        <!-- In-Depth Problem & Solution -->
+                        <div class="modal-overview-block">
+                            <h4 class="modal-section-title"><span>►</span> System Overview &amp; Problem Solved</h4>
+                            <p class="modal-long-desc" id="modal-long-desc">
+                                Detailed overview text...
+                            </p>
+                        </div>
+
+                        <!-- Technical Architecture Highlights -->
+                        <div class="modal-features-block">
+                            <h4 class="modal-section-title"><span>►</span> Key Architectural Highlights</h4>
+                            <ul class="modal-features-list" id="modal-features-list">
+                                <!-- Populated dynamically by script.js -->
+                            </ul>
+                        </div>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="modal-tech-block">
+                            <h4 class="modal-section-title"><span>►</span> Technologies &amp; Tooling</h4>
+                            <div class="project-tags" id="modal-tech-tags">
+                                <!-- Populated dynamically by script.js -->
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="modal-footer-actions">
+                            <a href="#chat" class="pixel-btn pixel-btn-primary" id="modal-live-link">
+                                <span>🌐</span> LAUNCH LIVE DEMO
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-secondary" id="modal-github-link">
+                                <span>💻</span> GITHUB REPOSITORY
+                            </a>
+                            <button type="button" class="pixel-btn pixel-btn-outline" id="modal-secondary-close">
+                                <span>✕</span> CLOSE INSPECTOR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- SECTION: VIDEO SHOWCASE                               -->
+        <!-- ===================================================== -->
+        <!-- Portfolio introduction video — responsive pixel-art styled embed -->
+        <section class="section video-showcase-section" id="video-showcase" aria-labelledby="video-showcase-heading">
+            <div class="container video-showcase-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <span class="section-tag">► BROADCAST CHANNEL</span>
+                    <h2 id="video-showcase-heading" class="section-title">Portfolio Highlight</h2>
+                    <p class="section-subtitle">A personal introduction — who I am, what I build, and how I think</p>
+                </div>
+
+                <!-- Video Window Frame -->
+                <div class="video-window" id="video-window">
+                    <!-- Pixel window title bar -->
+                    <div class="video-window-titlebar">
+                        <div class="video-window-title">
+                            <span class="video-title-icon">🎬</span>
+                            <span>CHAYA_INTRO.MP4</span>
+                        </div>
+                        <div class="video-window-controls" aria-hidden="true">
+                            <span class="video-window-btn" style="background: var(--accent-gold);"></span>
+                            <span class="video-window-btn" style="background: var(--accent-green);"></span>
+                            <span class="video-window-btn" style="background: var(--accent-highlight);"></span>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Video Wrapper (16:9 aspect ratio) -->
+                    <div class="video-responsive-wrapper">
+                        <video
+                            id="portfolio-intro-video"
+                            class="portfolio-video"
+                            controls
+                            preload="metadata"
+                            poster="profile photo.jpeg"
+                            aria-label="Chaya's portfolio introduction video"
+                        >
+                            <source src="profile resume.mp4" type="video/mp4">
+                            <p class="video-fallback-msg">Your browser does not support HTML5 video. <a href="profile resume.mp4">Download the video</a> to view it.</p>
+                        </video>
+                    </div>
+
+                    <!-- Video Caption & Info Footer -->
+                    <div class="video-caption-bar">
+                        <div class="video-caption-text">
+                            <span class="video-caption-icon">📺</span>
+                            <div>
+                                <p class="video-caption-title">Meet Chaya — Software Engineer &amp; Problem Solver</p>
+                                <p class="video-caption-desc">A candid walkthrough of my engineering journey, technical philosophy, key projects, and what drives me to build great software. Featuring highlights from GramSetu, AlgoVis, and CloudTask.</p>
+                            </div>
+                        </div>
+                        <div class="video-caption-meta">
+                            <span class="video-meta-badge"><span>👤</span> Chaya S</span>
+                            <span class="video-meta-badge"><span>🔗</span> github.com/chaya-s-370a84392</span>
+                            <span class="video-meta-badge"><span>📧</span> chayaschayas713@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons below the video -->
+                <div class="video-actions">
+                    <a href="#projects" class="pixel-btn pixel-btn-primary" id="video-cta-projects">
+                        <span>⚔️</span> EXPLORE MY PROJECTS
+                    </a>
+                    <a href="#contact" class="pixel-btn pixel-btn-secondary" id="video-cta-contact">
+                        <span>✉️</span> LET'S COLLABORATE
+                    </a>
+                    <a href="Chaya_resume.pdf" class="pixel-btn pixel-btn-outline" id="video-cta-resume" download>
+                        <span>📄</span> DOWNLOAD RESUME
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- SECTION: TESTIMONIALS -->
+        <!-- ===================================================== -->
+        <!-- Testimonials section: Endorsements, peer reviews, and mentor recommendations -->
+        <section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+            <div class="container testimonials-container">
+                <h2 id="testimonials-heading" class="section-title">Testimonials &amp; Endorsements</h2>
+                <p class="section-subtitle">What engineering leads, mentors, and collaborators say</p>
+
+                <div class="testimonials-grid" id="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <span class="testimonial-avatar-pixel">🧝</span>
+                            <div>
+                                <h3 class="testimonial-author">Senior Engineering Lead</h3>
+                                <span class="testimonial-role">Tech Mentor &amp; Architect</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-quote">
+                            "Chaya writes exceptionally clean, thoughtful code and approaches complex problems with tenacity and precision. A standout software engineer."
+                        </p>
+                    </article>
+
+                    <!-- Testimonial 2 -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <span class="testimonial-avatar-pixel">🧙‍♂️</span>
+                            <div>
+                                <h3 class="testimonial-author">Full-Stack Collaborator</h3>
+                                <span class="testimonial-role">Project Peer</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-quote">
+                            "Working together was seamless. Great architectural intuition, rapid debugging skills, and a delight to have in any sprint."
+                        </p>
+                    </article>
+
+                    <!-- Testimonial 3 -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <span class="testimonial-avatar-pixel">⚔️</span>
+                            <div>
+                                <h3 class="testimonial-author">Product Manager</h3>
+                                <span class="testimonial-role">Agile Delivery</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-quote">
+                            "Consistently translates ambiguous requirements into robust, high-performance features. Always ships ahead of time."
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- SECTION: CHAT -->
+        <!-- ===================================================== -->
+        <!-- Chat section: Interactive pixel terminal / dialogue interface -->
+        <section class="section chat-section" id="chat" aria-labelledby="chat-heading">
+            <div class="container chat-container">
+                <h2 id="chat-heading" class="section-title">Interactive Terminal Chat</h2>
+                <p class="section-subtitle">Connect with Chaya's virtual assistant or send an instant message</p>
+
+                <!-- Pixel Chat Terminal Container -->
+                <div class="chat-terminal-box">
+                    <div class="terminal-titlebar">
+                        <span class="terminal-title">TERMINAL://CHAT_AI.EXE</span>
+                        <span class="terminal-status">● STATUS: LISTENING</span>
+                    </div>
+                    <div class="terminal-screen" id="chat-messages">
+                        <div class="terminal-msg bot-msg">
+                            <span class="msg-sender">[CHAYA-BOT]:</span>
+                            <span class="msg-text">Welcome! I am Chaya's interactive portfolio assistant. Ask me about tech stack, experience, or leave a message!</span>
+                        </div>
+                    </div>
+                    <form class="terminal-input-bar" id="chat-input-form">
+                        <span class="terminal-prompt">&gt;</span>
+                        <input type="text" class="terminal-input" id="chat-input" placeholder="Type a message or command (e.g. 'skills', 'experience')..." aria-label="Chat input message">
+                        <button type="submit" class="pixel-btn pixel-btn-primary terminal-send-btn" id="chat-send-btn">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- SECTION: CONTACT (ETC.) -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- SECTION: AI CHAT                                      -->
+        <!-- ===================================================== -->
+        <!-- AI Chat section: Visitors can ask Chaya's AI persona questions -->
+        <section class="section chat-section" id="chat" aria-labelledby="chat-heading">
+            <div class="container chat-container">
+
+                <!-- Section Header -->
+                <div class="section-header">
+                    <span class="section-tag">► NEURAL LINK TERMINAL</span>
+                    <h2 id="chat-heading" class="section-title">Chat with Chaya AI</h2>
+                    <p class="section-subtitle">An AI simulation of Chaya — ask about skills, projects, experience, or anything else</p>
+                </div>
+
+                <!-- Chat Window (Pixel RPG terminal style) -->
+                <div class="chat-window" id="chat-window" role="log" aria-live="polite" aria-label="AI Chat Window">
+
+                    <!-- Window Title Bar -->
+                    <div class="chat-window-titlebar">
+                        <div class="chat-window-title">
+                            <span class="chat-status-dot" id="chat-status-dot" aria-label="AI online"></span>
+                            <span class="chat-window-name">CHAYA_AI.EXE</span>
+                            <span class="chat-version-badge">v1.0</span>
+                        </div>
+                        <div class="chat-titlebar-actions">
+                            <button type="button" class="chat-clear-btn" id="chat-clear-btn" aria-label="Clear chat history" title="Clear Chat">
+                                <span>🗑</span> CLEAR
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Message Display Area -->
+                    <div class="chat-messages-area" id="chat-messages" aria-label="Chat messages">
+
+                        <!-- Welcome / Boot-up message (static, always visible) -->
+                        <div class="chat-msg chat-msg-bot" id="chat-welcome-msg">
+                            <span class="chat-avatar bot-avatar" aria-hidden="true">🤖</span>
+                            <div class="chat-bubble bot-bubble">
+                                <p class="chat-bubble-text">
+                                    <span class="chat-sender-label">CHAYA AI</span>
+                                    Initializing neural link... <span class="boot-blink">█</span><br><br>
+                                    Greetings, Traveler! I'm <strong>Chaya AI</strong> — a simulated version of Chaya S, Software Engineer. Ask me about her skills, projects, experience, or how to collaborate! 🚀
+                                </p>
+                                <span class="chat-timestamp" aria-label="Message time">System boot</span>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic messages are injected here by script.js -->
+
+                    </div>
+
+                    <!-- Typing Indicator (hidden by default, shown during bot "thinking") -->
+                    <div class="chat-typing-indicator" id="chat-typing-indicator" aria-live="polite" aria-label="Chaya AI is typing" hidden>
+                        <span class="chat-avatar bot-avatar" aria-hidden="true">🤖</span>
+                        <div class="typing-dots-wrapper">
+                            <span class="typing-dot"></span>
+                            <span class="typing-dot"></span>
+                            <span class="typing-dot"></span>
+                        </div>
+                    </div>
+
+                    <!-- Suggestion Chips (quick prompts for visitors) -->
+                    <div class="chat-suggestions" id="chat-suggestions" aria-label="Quick question suggestions">
+                        <span class="suggestions-label">► TRY ASKING:</span>
+                        <div class="suggestion-chips" id="suggestion-chips">
+                            <button type="button" class="suggestion-chip" data-query="What are your top skills?">⚡ Top Skills</button>
+                            <button type="button" class="suggestion-chip" data-query="Tell me about your projects">⚔️ Projects</button>
+                            <button type="button" class="suggestion-chip" data-query="Are you available to hire?">💼 Hire Me</button>
+                            <button type="button" class="suggestion-chip" data-query="What is your experience with backend development?">🏗️ Backend Exp</button>
+                            <button type="button" class="suggestion-chip" data-query="How can I contact Chaya?">✉️ Contact</button>
+                            <button type="button" class="suggestion-chip" data-query="Tell me something fun about yourself">🎮 Fun Fact</button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input Row -->
+                    <div class="chat-input-area">
+                        <form class="chat-input-form" id="chat-input-form" autocomplete="off" aria-label="Send a message">
+                            <label for="chat-input" class="sr-only">Type your message</label>
+                            <input
+                                type="text"
+                                id="chat-input"
+                                class="chat-input-field"
+                                name="message"
+                                placeholder="Type a message... (e.g. What are your skills?)"
+                                maxlength="300"
+                                aria-label="Chat message input"
+                                autocomplete="off"
+                                spellcheck="false"
+                            >
+                            <button type="submit" class="chat-send-btn" id="chat-send-btn" aria-label="Send message">
+                                <span class="send-btn-icon" aria-hidden="true">►</span>
+                                <span class="send-btn-label">SEND</span>
+                            </button>
+                        </form>
+                        <p class="chat-disclaimer">
+                            🤖 <strong>AI Simulation</strong> — Responses are pre-programmed. 
+                            <!-- API_INTEGRATION_NOTE: Replace simulated replies with a real LLM API (e.g. OpenAI GPT-4, Google Gemini) for live AI responses. See script.js for integration point. -->
+                            <a href="#contact" class="chat-contact-link">Contact Chaya directly →</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- API Integration Notice Card -->
+                <div class="chat-api-notice" id="chat-api-notice" aria-label="Developer note">
+                    <span class="api-notice-icon">🔧</span>
+                    <div>
+                        <p class="api-notice-title">Developer Note — API Integration Ready</p>
+                        <p class="api-notice-desc">This chat uses pre-programmed responses. To connect a live AI, see the comments in <code>script.js</code> inside the <code>fetchAIResponse()</code> function — swap in any OpenAI / Gemini / Claude API endpoint.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- SECTION: CONTACT                                      -->
+        <!-- ===================================================== -->
+        <!-- Contact section: Inquiries, communications, and social reach -->
+        <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+            <div class="container contact-container">
+                <h2 id="contact-heading" class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Interested in collaborating or have any questions? Feel free to reach out.</p>
+
+                <!-- Placeholder: Contact form and contact details -->
+                <div class="contact-wrapper" id="contact-wrapper">
+                    <!-- Placeholder: Direct email & location details -->
+                    <div class="contact-info">
+                        <p class="contact-item">
+                            <strong>Email:</strong> <a href="mailto:chayaschayas713@gmail.com" id="contact-email">chayaschayas713@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <!-- Placeholder: Contact form -->
+                    <form class="contact-form" id="contact-form" action="#" method="POST">
+                        <!-- Placeholder inputs: Name, Email, Subject, Message -->
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" id="form-email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btn-submit-contact">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER — PIXEL ART STYLE WITH SOCIAL ICONS               -->
+    <!-- ========================================================= -->
+    <footer class="footer" id="footer" role="contentinfo" aria-label="Site footer">
+
+        <!-- Pixel-block top-border divider -->
+        <div class="footer-divider" aria-hidden="true">
+            <span class="footer-divider-pixel fdp-accent"></span>
+            <span class="footer-divider-pixel"></span>
+            <span class="footer-divider-pixel fdp-accent"></span>
+            <span class="footer-divider-pixel fdp-hi"></span>
+            <span class="footer-divider-pixel fdp-accent"></span>
+            <span class="footer-divider-pixel fdp-hi"></span>
+            <span class="footer-divider-pixel fdp-accent"></span>
+            <span class="footer-divider-pixel"></span>
+            <span class="footer-divider-pixel fdp-accent"></span>
+        </div>
+
+        <div class="container footer-container">
+
+            <!-- Brand + Tagline -->
+            <div class="footer-brand">
+                <a href="#hero" class="footer-logo" aria-label="Back to top — Chaya.dev">
+                    <span class="footer-logo-icon" aria-hidden="true">&#128126;</span>
+                    <span>CHAYA.DEV</span>
+                </a>
+                <p class="footer-tagline">
+                    Crafting scalable systems &amp; pixel-perfect experiences &mdash; one commit at a time.
+                </p>
+            </div>
+
+            <!-- Social Media Icon Row -->
+            <nav class="footer-social-nav" aria-label="Social media and contact links">
+                <p class="footer-social-heading" aria-hidden="true">&#9658; CONNECT WITH ME</p>
+                <ul class="footer-social-list" id="footer-social-links">
+
+                    <!-- GitHub -->
+                    <li>
+                        <a href="https://github.com/chaya-s-370a84392"
+                           target="_blank" rel="noopener noreferrer"
+                           class="footer-social-icon" id="social-github"
+                           aria-label="GitHub profile — github.com/chaya-s-370a84392 (opens in new tab)"
+                           title="GitHub">
+                            <span class="social-icon-pixel" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" focusable="false">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </span>
+                            <span class="social-icon-label">GitHub</span>
+                        </a>
+                    </li>
+
+                    <!-- LinkedIn -->
+                    <li>
+                        <a href="https://www.linkedin.com/in/chaya-s-370a84392"
+                           target="_blank" rel="noopener noreferrer"
+                           class="footer-social-icon" id="social-linkedin"
+                           aria-label="LinkedIn profile — linkedin.com/in/chaya-s-370a84392 (opens in new tab)"
+                           title="LinkedIn">
+                            <span class="social-icon-pixel" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" focusable="false">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </span>
+                            <span class="social-icon-label">LinkedIn</span>
+                        </a>
+                    </li>
+
+                    <!-- Email -->
+                    <li>
+                        <a href="mailto:chayaschayas713@gmail.com"
+                           class="footer-social-icon" id="social-email"
+                           aria-label="Send email to chayaschayas713@gmail.com"
+                           title="Email Chaya">
+                            <span class="social-icon-pixel" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" focusable="false">
+                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </span>
+                            <span class="social-icon-label">Email</span>
+                        </a>
+                    </li>
+
+                    <!-- Resume PDF -->
+                    <li>
+                        <a href="Chaya_resume.pdf"
+                           class="footer-social-icon" id="social-resume"
+                           aria-label="Download Chaya's resume as a PDF file"
+                           title="Download Resume" download>
+                            <span class="social-icon-pixel" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" focusable="false">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-6-7H8v-2h4v2zm2 4H8v-2h6v2z"/>
+                                </svg>
+                            </span>
+                            <span class="social-icon-label">Resume</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Quick Navigation Links -->
+            <nav class="footer-nav" aria-label="Quick site navigation">
+                <p class="footer-nav-heading" aria-hidden="true">&#9658; NAVIGATE</p>
+                <ul class="footer-nav-list">
+                    <li><a href="#about"         class="footer-nav-link">&#9658; About</a></li>
+                    <li><a href="#skills"         class="footer-nav-link">&#9658; Skills</a></li>
+                    <li><a href="#timeline"       class="footer-nav-link">&#9658; Timeline</a></li>
+                    <li><a href="#projects"       class="footer-nav-link">&#9658; Projects</a></li>
+                    <li><a href="#video-showcase" class="footer-nav-link">&#9658; Video</a></li>
+                    <li><a href="#chat"           class="footer-nav-link">&#9658; Chat AI</a></li>
+                    <li><a href="#contact"        class="footer-nav-link">&#9658; Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Copyright + Back to Top -->
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    <span aria-hidden="true">&copy;</span>
+                    <span class="sr-only">Copyright</span>
+                    2026 <strong>Chaya S</strong>. All rights reserved.
+                    <span class="footer-heart" aria-label="built with love and coffee">Built with &#10084;&#65039; &amp; &#9749;</span>
+                </p>
+                <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Scroll back to top of page">
+                    <span aria-hidden="true">&#9650;</span> BACK TO TOP
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    </div><!-- End of .page-layout-wrapper -->
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
+
